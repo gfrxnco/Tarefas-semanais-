@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarefas Semanais</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Minhas Tarefas Semanais</h1>
+    </header>
+
+    <section class="controls">
+      <select id="day-select">
+        <option value="segunda">Segunda</option>
+        <option value="terca">Terça</option>
+        <option value="quarta">Quarta</option>
+        <option value="quinta">Quinta</option>
+        <option value="sexta">Sexta</option>
+        <option value="sabado">Sábado</option>
+        <option value="domingo">Domingo</option>
+      </select>
+
+      <input type="text" id="task-input" placeholder="Digite sua tarefa..." />
+      <button onclick="addTask()">Adicionar</button>
+
+      <div class="filters">
+        <button onclick="filterTasks('todas')">Todas</button>
+        <button onclick="filterTasks('pendentes')">Pendentes</button>
+        <button onclick="filterTasks('concluidas')">Concluídas</button>
+      </div>
+    </section>
+
+    <section id="task-list">
+      <!-- Tarefas aparecem aqui -->
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
